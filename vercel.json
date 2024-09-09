@@ -12,5 +12,5 @@
       "dest": "index.js"
     }
   ],
-  "buildCommand": "pnpm install && pnpx prisma generate"
+  "buildCommand": "pnpm install && pnpx prisma generate && pnpx prisma migrate dev"
 }
