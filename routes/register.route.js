@@ -10,12 +10,12 @@ router.get('/', async (req, res) => {
 })
 
 router.post('/', async (req, res) => {
-  const { username, userEdge, responses } = req.body
+  const { username, userlastname, userEdge, responses } = req.body
   const { response1, response2, response3, response4 } = responses
-  const data = { username, userEdge, response1, response2, response3, response4 }
+  const data = { username, userlastname, userEdge, response1, response2, response3, response4 }
   const validation = Register.safeParse(data)
   if (validation.success) {
-    const response = addRegister({ username, userEdge, responses })
+    const response = addRegister({ data })
     if (response.error) {
       return res.status(400).json(response.error)
     }

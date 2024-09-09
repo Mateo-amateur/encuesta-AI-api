@@ -8,11 +8,14 @@ datasource db {
 }
 
 model register {
-  id        Int    @id @default(autoincrement())
-  username  String @unique
-  userEdge  Int
-  response1 Int
-  response2 Int
-  response3 Int
-  response4 Int
+  id           Int    @id @default(autoincrement())
+  username     String
+  userlastname String
+  userEdge     Int
+  response1    Int
+  response2    Int
+  response3    Int
+  response4    Int
+
+  @@unique([username, userlastname])
 }
