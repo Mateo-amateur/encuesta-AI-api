@@ -5,9 +5,10 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node index.js && pnpx prisma generate",
+    "start": "node index.js",
     "open": "node --watch index.js",
-    "test": "set NODE_OPTIONS=--experimental-vm-modules && pnpx jest"
+    "test": "set NODE_OPTIONS=--experimental-vm-modules && pnpx jest",
+    "migrate": "prisma migrate deploy"
   },
   "keywords": [],
   "author": "",
