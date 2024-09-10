@@ -31,8 +31,6 @@ app.use(morgan('dev'))
 
 app.use('/register', router)
 
-if (process.env.ENT === 'Production') {
-  app.listen(3000, () => {
-    console.log(`Server is running on port ${PORT}`)
-  })
-}
+app.listen(3000, () => {
+  console.log(`Server is running on port ${PORT}`)
+})
