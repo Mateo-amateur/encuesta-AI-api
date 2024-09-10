@@ -5,6 +5,8 @@ import cors from 'cors'
 
 export const app = express()
 
+const PORT = process.env.PORT || 3000
+
 const ACCEPTED_ORIGINS = [
   'https://encuesta-ia-nn1g9b31d-mateo-amateurs-projects.vercel.app/'
 ]
@@ -31,6 +33,6 @@ app.use(morgan('dev'))
 
 app.use('/register', router)
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`)
 })
