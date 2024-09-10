@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node index.js",
+    "start": "node index.js && pnpx prisma generate",
     "open": "node --watch index.js",
     "test": "set NODE_OPTIONS=--experimental-vm-modules && pnpx jest"
   },
