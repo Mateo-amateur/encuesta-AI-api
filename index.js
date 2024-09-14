@@ -7,15 +7,18 @@ export const app = express()
 
 const PORT = process.env.PORT || 3000
 
-const ACCEPTED_ORIGINS = [
-  'https://encuesta-ai-ui-996a.vercel.app/',
-  // ! Remove this line after the debug
-  'http://localhost:5173/'
-]
-
-const corsMiddleware = ({ acceptedOrigins = process.env.UI_URL ? process.env.UI_URL : ACCEPTED_ORIGINS } = {}) => cors({
+const corsMiddleware = () => cors({
   origin: (origin, callback) => {
-    if (acceptedOrigins.includes(origin)) {
+    // ! Remove this line after the debug
+    const ACCEPTED_ORIGINS = [
+      'https://encuesta-ai-ui-996a.vercel.app',
+      'http://localhost:5173'
+    ]
+
+    console.log(ACCEPTED_ORIGINS, origin);
+
+
+    if (ACCEPTED_ORIGINS.includes(origin)) {
       return callback(null, true)
     }
 
