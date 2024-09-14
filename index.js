@@ -8,7 +8,9 @@ export const app = express()
 const PORT = process.env.PORT || 3000
 
 const ACCEPTED_ORIGINS = [
-  'https://encuesta-ia-nn1g9b31d-mateo-amateurs-projects.vercel.app/'
+  'https://encuesta-ai-ui-996a.vercel.app/',
+  // ! Remove this line after the debug
+  'http://localhost:5173/'
 ]
 
 const corsMiddleware = ({ acceptedOrigins = process.env.UI_URL ? process.env.UI_URL : ACCEPTED_ORIGINS } = {}) => cors({
