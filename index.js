@@ -2,8 +2,11 @@ import router from "./routes/register.route.js"
 import express from 'express'
 import morgan from 'morgan'
 import cors from 'cors'
+import { initializationOfDB } from './models/register.js'
 
 export const app = express()
+
+initializationOfDB()
 
 const PORT = process.env.PORT || 3000
 
