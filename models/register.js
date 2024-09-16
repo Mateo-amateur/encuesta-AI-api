@@ -44,8 +44,6 @@ export async function addRegister({ data }) {
   const { username, userlastname, userEdge, response1, response2, response3, response4 } = data
   try {
     const res = await prisma.register.create({ data: { username, userlastname, response1, response2, response3, response4, userEdge } })
-    console.log(data);
-
     return res
   } catch (error) {
     console.error(error)
