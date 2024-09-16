@@ -27,8 +27,6 @@ router.post('/', async (req, res) => {
 router.get('/users', async (req, res) => {
   try {
     const users = await getUsers()
-    console.log(users);
-
     return res.status(200).json(users)
   } catch (error) {
     console.log(error);
