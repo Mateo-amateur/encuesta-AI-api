@@ -1,5 +1,5 @@
 import { Router } from 'express'
-import { getRegisters, addRegister } from '../models/register.js'
+import { getRegisters, addRegister, getUsers } from '../models/register.js'
 import { Register } from '../schemas/register.schema.js'
 
 const router = Router()
@@ -22,6 +22,19 @@ router.post('/', async (req, res) => {
 
     res.status(201).json(response)
   } else return res.status(404).json(validation.error)
+})
+
+router.get('/users', async (req, res) => {
+  try {
+    const users = await getUsers()
+    console.log(users);
+
+    return res.status(200).json(users)
+  } catch (error) {
+    console.log(error);
+
+    return res.status(404).json({ error: 'Error getting users\'s data' })
+  }
 })
 
 export default router

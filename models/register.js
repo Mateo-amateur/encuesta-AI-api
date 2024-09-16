@@ -50,3 +50,14 @@ export async function addRegister({ data }) {
     return { error: 'Error to create a new register' }
   }
 }
+
+export async function getUsers() {
+  try {
+    const users = await prisma.register.findMany({ select: { username: true, userlastname: true } })
+    console.log(users);
+    return users
+  } catch (error) {
+    console.log(error);
+    return { error: 'error' }
+  }
+}
