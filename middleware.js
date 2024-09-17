@@ -4,7 +4,7 @@ export const corsMiddleware = () => cors({
   origin: (origin, callback) => {
     // ! Remove this line after the debug
     const ACCEPTED_ORIGINS = [
-      'https://encuesta-ai-ui-996a.vercel.app',
+      'https://encuesta-enj.mateoapiana.website',
       'http://localhost:5173'
     ]
 
