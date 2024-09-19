@@ -1,5 +1,5 @@
 
-# Encueta a cerca de la Inteligencia Artificial
+# Encuesta a cerca de la Inteligencia Artificial
 Esta encuesta se halla organizada por alumnos de la Escuela del Niño Jesús, La Reja, Bs Aires, Argentina.
 
 Esta es la API y utiliza las siguientes tecnologías:
