@@ -17,7 +17,7 @@ router.post('/', async (req, res) => {
   if (validation.success) {
     const response = await addRegister({ data })
     if (response.error) {
-      return res.status(400).json(response.error)
+      return res.status(404).json(response.error)
     }
 
     res.status(201).json(response)
