@@ -7,13 +7,13 @@ export const app = express()
 
 const PORT = process.env.PORT || 3000
 
-// app.use(corsMiddleware())
+app.use(corsMiddleware())
 
-// app.use(express.json())
+app.use(express.json())
 
-// app.use(morgan('dev'))
+app.use(morgan('dev'))
 
-// app.use('/register', router)
+app.use('/register', router)
 
 app.get("/", (req, res) => {
   res.send("Express on Vercel")
